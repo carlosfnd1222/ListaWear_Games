@@ -30,11 +30,12 @@ public class MainActivity extends Activity {
 
         recyclerView.setLayoutManager(layoutManager);
 
-        items.add(new ItemsList(R.mipmap.flutter, "Flutter", "Curso de Flutter"));
-        items.add(new ItemsList(R.mipmap.java, "Java", "Curso de Java"));
-        items.add(new ItemsList(R.mipmap.cplus, "C#", "Curso de C#"));
-        items.add(new ItemsList(R.mipmap.php, "PHP", "Curso de PHP"));
-        items.add(new ItemsList(R.mipmap.javascript, "JavaScript", "Curso de Javascript"));
+        items.add(new ItemsList(R.mipmap.forza, "Forza Horizon 5", "Explora paisajes dinámicos y en constante evolución del mundo abierto de México."));
+        items.add(new ItemsList(R.mipmap.doom, "Doom Eternal", "Doom Eternal es un videojuego de acción y disparos en primera persona."));
+        items.add(new ItemsList(R.mipmap.deadspace, "Dead Space", "Videojuego de disparos en tercera persona con ambientación de videojuego de terror."));
+        items.add(new ItemsList(R.mipmap.metro, "Metro 2033", "Combina elementos de acción y con elementos de disparos en primera persona."));
+        items.add(new ItemsList(R.mipmap.need, "Need for Speed", "Se centra en las carreras callejeras ilícitas"));
+        items.add(new ItemsList(R.mipmap.gears, "Gear of War", "Disparos en tercera persona, del género acción-aventura y estrategia y terror."));
 
         ListAdapter listAdapter = new ListAdapter(items, new ListAdapter.AdapterCallback() {
             @Override
@@ -42,6 +43,7 @@ public class MainActivity extends Activity {
                 Intent intent = new Intent(getApplicationContext(), CardActivity.class);
                 intent.putExtra("titulo", items.get(itemPosition).getNameItem());
                 intent.putExtra("descripcion", items.get(itemPosition).getDescriptionItem());
+                intent.putExtra("imagen", items.get(itemPosition).getImageItem());
                 startActivity(intent);
             }
         });

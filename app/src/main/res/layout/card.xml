@@ -13,7 +13,9 @@
 
         <android.support.wearable.view.CardFrame
             android:layout_width="wrap_content"
-            android:layout_height="fill_parent">
+            android:layout_height="240dp"
+            android:backgroundTint="#000000"
+            android:foregroundTint="#000000">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -26,24 +28,34 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="Titulo"
-                    android:textColor="@color/black"
-                    android:textSize="18sp"/>
+
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/txtDescripcion"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="Descripcion del Card"
-                    android:textColor="@color/black"
-                    android:textSize="12sp"
-                    />
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btnRegistro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:textSize="13dp"
+                    android:backgroundTint="#033291"
+                    android:text="Lanzar en Xbox" />
+
                 <Button
                     android:id="@+id/btnCerrar"
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     android:layout_gravity="center"
-                    android:text="Cerrar"
-                    />
+                    android:backgroundTint="#404D70"
+                    android:text="Cerrar" />
             </LinearLayout>
         </android.support.wearable.view.CardFrame>
     </android.support.wearable.view.CardScrollView>
